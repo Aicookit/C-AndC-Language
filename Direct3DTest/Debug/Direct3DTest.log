@@ -1,0 +1,4 @@
+﻿D:\Visual Studio 2017\visual studio 2017\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets(76,5): warning : 对路径“c:\users\admin\desktop\c++andc#\doubleccproject\direct3dtest\released\direct3dtest.exe”的访问被拒绝。
+D:\Visual Studio 2017\visual studio 2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  Main.cpp
+LINK : fatal error LNK1168: 无法打开 .\Released\Direct3DTest.exe 进行写入

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpConsoleApp", "CSharpC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++ClassSpace", "C++ClassSpace\C++ClassSpace.vcxproj", "{2D2CEEC2-2F78-4D03-BD09-B25313C49D04}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Direct3DTest", "Direct3DTest\Direct3DTest.vcxproj", "{6EB0D469-A874-4D43-943B-F5A40C996BF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,17 @@ Global
 		{2D2CEEC2-2F78-4D03-BD09-B25313C49D04}.Release|x64.Build.0 = Release|x64
 		{2D2CEEC2-2F78-4D03-BD09-B25313C49D04}.Release|x86.ActiveCfg = Release|Win32
 		{2D2CEEC2-2F78-4D03-BD09-B25313C49D04}.Release|x86.Build.0 = Release|Win32
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Debug|Any CPU.Build.0 = Debug|Win32
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Debug|x64.ActiveCfg = Debug|x64
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Debug|x64.Build.0 = Debug|x64
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Debug|x86.ActiveCfg = Debug|Win32
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Debug|x86.Build.0 = Debug|Win32
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Release|Any CPU.ActiveCfg = Release|Win32
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Release|x64.ActiveCfg = Release|x64
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Release|x64.Build.0 = Release|x64
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Release|x86.ActiveCfg = Release|Win32
+		{6EB0D469-A874-4D43-943B-F5A40C996BF4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
