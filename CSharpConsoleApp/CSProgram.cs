@@ -7,6 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,14 +21,79 @@ namespace CSharpConsoleApp
     class CSProgram
     {
 
+
         static void Main(string[] args)
         {
             Console.WriteLine("C#测试");
+            CodePerformanceTest cpt = new CodePerformanceTest();
+            cpt.TestCodePerformance();
         }
 
 
 
+
     }
+    ///<summary>
+    ///Code performance analysis
+    ///</summary>
+    class CodePerformanceTest
+    {
+        public void TestCodePerformance()
+        {
+            Stopwatch sp = new Stopwatch();
+
+            sp.Start();
+            TestForeach();
+            sp.Stop();
+            Console.WriteLine($"It took {sp.ElapsedMilliseconds} milliseconds");
+        }
+
+        List<string> strList = new List<string>() { "龘（dá）@", "靐（bìng）", "齉 （nàng）@", "齾 （yà ）", "麤 （cū)@", "龖（dá）", "龗 （líng ）", "鱻 （xiān）@", "爩 （yù）", "a" };
+        int num = 10000;
+        public void TestFor()
+        {
+            string result = null;
+            for (int i = 0; i < strList.Count; i++)
+            {
+                if (strList[i].IndexOf("@")==-1)
+                {
+                    result += i.ToString();
+                }
+               
+            }
+        }
+        public void TestForeach()
+        {
+            string result = null;
+            foreach (var item in strList)
+            {
+                if (item.Contains("y"))
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+        public void TestLambda()
+        {
+          var getList =  strList.Where(item => {  return item.Contains("y"); });
+            foreach (var item in getList)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        public void TestLINQ()
+        {
+            int[] number = { 2, 4, 5, 7, 8, 10 };
+            List<int> nub =new List<int>() { 2, 4, 5, 7, 8, 10 };
+            //IEnumerable<int> findNum = from n in nub where n < 8 select n;
+            IEnumerable<string> findStr = from item in strList where item.Length < 6 select item;
+            foreach (var item in findStr)
+            {
+                Console.WriteLine("{0}",item);
+            }
+        }
+    }
+
 
 
     /// <summary>
