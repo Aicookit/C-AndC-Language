@@ -1,17 +1,20 @@
 #pragma once
-
+#include <Windows.h>
+///负责windows窗口的创建和使用directx9创建图形引擎
 class CWindowSystem
 {
 public:
 	CWindowSystem();
 	~CWindowSystem();
 
-	void Init();
-	void Run();
+	bool Init();
+	bool Run();
 	void Close();
 
 private:
 
-
+	bool InitWindow(int screenWith ,int screenHeigh );
+	HWND m_hWnd;
+	static LRESULT CALLBACK WindowProc(HWND hWnd,UINT uMessage, WPARAM wParam, LPARAM lParam);
 };
 

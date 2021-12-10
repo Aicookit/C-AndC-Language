@@ -1,7 +1,6 @@
 C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\CSharpConsoleApp\bin\Debug\CSharpConsoleApp.exe.config
 C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\CSharpConsoleApp\bin\Debug\CSharpConsoleApp.exe
 C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\CSharpConsoleApp\bin\Debug\CSharpConsoleApp.pdb
-C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\CSharpConsoleApp\obj\Debug\CSharpConsoleApp.csprojAssemblyReference.cache
 C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\CSharpConsoleApp\obj\Debug\CSharpConsoleApp.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\CSharpConsoleApp\obj\Debug\CSharpConsoleApp.exe
 C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\CSharpConsoleApp\obj\Debug\CSharpConsoleApp.pdb

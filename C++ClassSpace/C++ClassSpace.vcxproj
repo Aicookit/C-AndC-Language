@@ -129,9 +129,13 @@
   <ItemGroup>
     <ClCompile Include="CPerson.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Stopwatch.cpp" />
+    <ClCompile Include="TimeCout.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPerson.h" />
+    <ClInclude Include="Stopwatch.h" />
+    <ClInclude Include="TimeCout.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="声明.txt" />

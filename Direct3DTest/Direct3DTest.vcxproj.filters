@@ -18,7 +18,7 @@
     <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="WindowSystem.cpp">
+    <ClCompile Include="CWindowSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -28,7 +28,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="WindowSystem.h">
+    <ClInclude Include="CWindowSystem.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

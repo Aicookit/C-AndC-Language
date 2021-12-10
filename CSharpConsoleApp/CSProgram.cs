@@ -49,7 +49,7 @@ namespace CSharpConsoleApp
         }
 
         List<string> strList = new List<string>() { "龘（dá）@", "靐（bìng）", "齉 （nàng）@", "齾 （yà ）", "麤 （cū)@", "龖（dá）", "龗 （líng ）", "鱻 （xiān）@", "爩 （yù）", "a" };
-        int num = 10000;
+        //int num = 10000;
         public void TestFor()
         {
             string result = null;
@@ -64,7 +64,7 @@ namespace CSharpConsoleApp
         }
         public void TestForeach()
         {
-            string result = null;
+            //string result = null;
             foreach (var item in strList)
             {
                 if (item.Contains("y"))

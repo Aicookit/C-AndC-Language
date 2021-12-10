@@ -1,1 +1,7 @@
-﻿
+﻿D:\Visual Studio 2017\visual studio 2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  CD3D.cpp
+  CD3DEngine.cpp
+  CWindowSystem.cpp
+  Main.cpp
+  正在生成代码...
+  Direct3DTest.vcxproj -> C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\Direct3DTest\.\Released\Direct3DTest.exe
