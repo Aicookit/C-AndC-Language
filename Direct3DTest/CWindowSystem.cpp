@@ -11,10 +11,7 @@ CWindowSystem::~CWindowSystem()
 
 bool CWindowSystem::Init()
 {
-	//int screenWidth, screenHeigh;
-	//screenWidth = 0;
-	//screenHeigh = 0;
-	//InitWindow();
+	//初始化win窗口
 	bool isInitWindows = InitWindow(600, 400);
 
 	if (!isInitWindows)
@@ -23,6 +20,7 @@ bool CWindowSystem::Init()
 	}
 	
 	//实例引擎
+	graphicEngine = new CGraphicEngine;
 
 	return true;
 }
@@ -30,7 +28,7 @@ bool CWindowSystem::Init()
 bool CWindowSystem::Run()
 {
 	MSG message = {};
-	//ZeroMemory(&message, sizeof(MSG));
+
 	bool flag = true;
 	while (flag)
 	{
@@ -38,7 +36,7 @@ bool CWindowSystem::Run()
 		{
 			if (message.message == WM_QUIT)
 			{
-				break;
+				flag = false;
 			}
 
 			if (GetMessage(&message,NULL,0,0))
@@ -47,8 +45,8 @@ bool CWindowSystem::Run()
 				DispatchMessage(&message);
 			}
 		}
-		
 		//Render...
+		flag = graphicEngine->FrameUpdata();
 	}
 
 	return true;
@@ -59,6 +57,12 @@ void CWindowSystem::Close()
 	if (m_hWnd)
 	{
 		m_hWnd = 0;
+	}
+
+	if (graphicEngine)
+	{
+		delete graphicEngine;
+		graphicEngine = 0;
 	}
 }
 

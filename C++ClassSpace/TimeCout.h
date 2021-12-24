@@ -11,10 +11,9 @@ class TimeCout
 public:
 	TimeCout();
 	~TimeCout();
-	template<typename FunctionT>
-	void coutSpent(FunctionT T);
+
+	void coutSpent();
 	void test2();
-	void test();
 
 private:
 

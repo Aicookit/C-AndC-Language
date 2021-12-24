@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\Released</OutDir>
+    <OutDir>.\Released\</OutDir>
     <IncludePath>D:\DXSDK_Jun10\Include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\DXSDK_Jun10\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -129,16 +129,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CD3D.cpp" />
-    <ClCompile Include="CD3DEngine.cpp" />
+    <ClCompile Include="CGraphicEngine.cpp" />
     <ClCompile Include="CWindowSystem.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\..\进度记录.txt" />
     <Text Include="案例.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CD3D.h" />
-    <ClInclude Include="CD3DEngine.h" />
+    <ClInclude Include="CGraphicEngine.h" />
     <ClInclude Include="CWindowSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

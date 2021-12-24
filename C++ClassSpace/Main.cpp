@@ -51,9 +51,6 @@ void test2()
 }
 int main()
 {
-	TimeCout tc;
-	tc.coutSpent(test2);
-	
 	return 0;
 
 }

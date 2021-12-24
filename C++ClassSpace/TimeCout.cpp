@@ -10,7 +10,7 @@ TimeCout::~TimeCout()
 
 void(*pTest)();
 
-template<typename FunctionT>
+
 //FunctionT TimeCout::coutSpent(FunctionT fun)
 //{
 //	
@@ -25,14 +25,13 @@ template<typename FunctionT>
 //	//double total = (timeEnd - timeStart);
 //	printf("本次运行共花销 %f 秒\n", total);
 //}
-void TimeCout::coutSpent(FunctionT fun)
+void TimeCout::coutSpent()
 {
 
 	timeStart = clock();
 
 	//放入要计算运行的code
 
-	pTest = fun;
 	timeEnd = clock();
 
 	double total = (double)(1.0*(timeEnd - timeStart) / CLOCKS_PER_SEC);

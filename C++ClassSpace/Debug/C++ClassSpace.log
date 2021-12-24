@@ -3,5 +3,4 @@
   Stopwatch.cpp
   TimeCout.cpp
   正在生成代码...
-Main.obj : error LNK2019: 无法解析的外部符号 "public: void (__cdecl*__thiscall TimeCout::coutSpent<void (__cdecl*)(void)>(void (__cdecl*)(void)))(void)" (??$coutSpent@P6AXXZ@TimeCout@@QAEP6AXXZP6AXXZ@Z)，该符号在函数 _main 中被引用
-.\Release\C++ClassSpace.exe : fatal error LNK1120: 1 个无法解析的外部命令
+  C++ClassSpace.vcxproj -> C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\C++ClassSpace\.\Release\C++ClassSpace.exe

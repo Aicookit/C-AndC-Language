@@ -12,21 +12,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 /// <summary>
 /// C# Test Collects
 /// </summary>
 namespace CSharpConsoleApp
 {
 
+    /// <summary>
+    ///  Main Function
+    /// </summary>
     class CSProgram
     {
-
-
         static void Main(string[] args)
         {
             Console.WriteLine("C#测试");
-            CodePerformanceTest cpt = new CodePerformanceTest();
-            cpt.TestCodePerformance();
+            
         }
 
 
