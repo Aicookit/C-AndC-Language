@@ -1,0 +1,22 @@
+
+C++知识点总结：
+常用的头文件：
+iostream:cout , cin 
+string  : string
+
+1.指针：
+	指针 ：本身也是一个对象,有值(存储了某数据的地址*p）和地址：本身的地址(&p)
+	指针的释放：谁new，谁delete，构造里new,就在析构里delete
+
+
+2.C++的类
+类的构造函数初始化属性：aclass:param1{1},param2{1}{}
+
+类的实例化：
+	aClass  acla;					   方式1
+	aClass  *p_aCla = new  aClass();   方式2
+
+
+
+字符串的操作：
+memcpy(name2, name, sizeof(name2));   把name拷贝到name2中，第三项是占内存大小

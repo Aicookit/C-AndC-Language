@@ -30,6 +30,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -73,6 +74,7 @@
     <OutDir>.\Released\</OutDir>
     <IncludePath>D:\DXSDK_Jun10\Include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\DXSDK_Jun10\Lib\x86;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -80,10 +82,14 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\C++AndC#\DoubleCCProject\C++ClassSpace;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -128,8 +134,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\C++ClassSpace\Stopwatch.cpp" />
     <ClCompile Include="CD3D.cpp" />
     <ClCompile Include="CGraphicEngine.cpp" />
+    <ClCompile Include="CModel.cpp" />
     <ClCompile Include="CWindowSystem.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
@@ -138,9 +146,16 @@
     <Text Include="案例.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\C++ClassSpace\Stopwatch.h" />
     <ClInclude Include="CD3D.h" />
     <ClInclude Include="CGraphicEngine.h" />
+    <ClInclude Include="CModel.h" />
     <ClInclude Include="CWindowSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C++ClassSpace\C++ClassSpace.vcxproj">
+      <Project>{2d2ceec2-2f78-4d03-bd09-b25313c49d04}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

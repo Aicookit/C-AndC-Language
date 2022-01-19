@@ -27,11 +27,18 @@
     <ClCompile Include="CGraphicEngine.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\C++ClassSpace\Stopwatch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CModel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="案例.txt">
       <Filter>资源文件</Filter>
     </Text>
+    <Text Include="..\..\..\进度记录.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CWindowSystem.h">
@@ -41,6 +48,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="CGraphicEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\C++ClassSpace\Stopwatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CModel.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

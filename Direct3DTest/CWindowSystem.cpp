@@ -21,28 +21,34 @@ bool CWindowSystem::Init()
 	
 	//实例引擎
 	graphicEngine = new CGraphicEngine;
+	bool result = graphicEngine->InitAllComponets(m_hWnd);
+	if (!result)
+	{
+		MessageBox(m_hWnd, "graphics initialize failed!", 0, MB_OK);
+	}
 
 	return true;
 }
 
 bool CWindowSystem::Run()
 {
-	MSG message = {};
+	MSG message;
 
 	bool flag = true;
 	while (flag)
 	{
 		if (PeekMessage(&message, NULL, 0, 0, PM_NOREMOVE))  //等待消息处理完后变false
 		{
-			if (message.message == WM_QUIT)
-			{
-				flag = false;
-			}
-
 			if (GetMessage(&message,NULL,0,0))
 			{
 				TranslateMessage(&message);
 				DispatchMessage(&message);
+			}
+
+			if (message.message == WM_QUIT)
+			{
+				flag = false;
+				break;
 			}
 		}
 		//Render...
@@ -54,15 +60,16 @@ bool CWindowSystem::Run()
 
 void CWindowSystem::Close()
 {
+	if (graphicEngine)
+	{
+		graphicEngine->Close();
+		delete graphicEngine;
+		graphicEngine = 0;
+	}
+
 	if (m_hWnd)
 	{
 		m_hWnd = 0;
-	}
-
-	if (graphicEngine)
-	{
-		delete graphicEngine;
-		graphicEngine = 0;
 	}
 }
 
@@ -98,14 +105,15 @@ bool CWindowSystem::InitWindow(int screenWith, int screenHeigh)
 	m_hWnd = CreateWindowEx(NULL, applicationName, "DirectX",WS_OVERLAPPEDWINDOW,
 		posX, posY, screenWith, screenHeigh, NULL, NULL, hinstance, NULL);
 
+
 	if (m_hWnd == NULL)
 	{
-		return 0;
+		return false;
 	}
 
 	ShowWindow(m_hWnd, SW_SHOW);
 
-	UpdateWindow(m_hWnd);
+	//UpdateWindow(m_hWnd);
 
 	return true;
 }
@@ -118,11 +126,12 @@ bool CWindowSystem::InitWindow(int screenWith, int screenHeigh)
 		 case WM_CLOSE:
 		 {
 			 //所有以Window结尾的方法，都不会进入消息队列，而是直接直接执行
-			 DestroyWindow(hwnd); //DestroyWindow发送另一个夏溪 WM__DESTROY
-			 break;
+			 PostQuitMessage(0); //DestroyWindow发送另一个夏溪 WM__DESTROY
+			 return 0;
 		 }
 		 case WM_DESTROY:
-			 PostQuitMessage(0); //此时GetMessage()的值为FALSE，窗口才会被关掉
+			 PostQuitMessage(0);
+			 return 0;
 		 //case WM_LBUTTONDOWN: //鼠标左键按下
 		 //{
 			// int xPos = LOWORD(lparam);//获取鼠标按下的坐标

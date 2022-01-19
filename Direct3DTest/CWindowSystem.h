@@ -1,6 +1,8 @@
 #pragma once
-#include <Windows.h>
+//#include <Windows.h>
 #include "CGraphicEngine.h"
+
+
 ///负责windows窗口的创建和使用directx9创建图形引擎
 class CWindowSystem
 {

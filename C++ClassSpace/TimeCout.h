@@ -19,5 +19,6 @@ private:
 
 	clock_t timeStart;
 	clock_t timeEnd;
+	double  timeTotal;
 };
 

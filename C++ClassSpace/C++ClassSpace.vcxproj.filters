@@ -27,20 +27,32 @@
     <ClCompile Include="TimeCout.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CTypesConvert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPerson.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Stopwatch.h">
+    <ClInclude Include="TimeCout.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TimeCout.h">
+    <ClInclude Include="CTypesConvert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="声明.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="C++单元.txt">
       <Filter>资源文件</Filter>
     </Text>
   </ItemGroup>

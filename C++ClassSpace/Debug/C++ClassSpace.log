@@ -1,4 +1,6 @@
-﻿  CPerson.cpp
+﻿  Classes.cpp
+  CPerson.cpp
+  CTypesConvert.cpp
   Main.cpp
   Stopwatch.cpp
   TimeCout.cpp
