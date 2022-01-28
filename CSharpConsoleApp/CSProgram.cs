@@ -25,10 +25,73 @@ namespace CSharpConsoleApp
     /// </summary>
     class CSProgram
     {
+        /// <summary>
+        /// 重构if...else
+        /// </summary>
+        /// <param name="args"></param>
+        /// 
+        public static string DoSomething3(string something)
+        {
+            if (something == "a") return "aaa";
+          
+            if (something == "bb") return "bbb";
+
+            return "defaulut things";
+        }
+        public static void DoSomething2(string something)
+        {
+            if (something == "a")
+            {
+                Console.WriteLine("aaa");
+                return;
+            }
+            if (something == "bb")
+            {
+                Console.WriteLine("bbb");
+                return;
+            }
+           
+            Console.WriteLine("defaulut things");
+        }
+        public static void DoSomething1(string something)
+        {
+            if (something=="a")
+            {
+                Console.WriteLine("aaa");
+            }
+            else if(something=="bb")
+            {
+                Console.WriteLine("bbb");
+            }
+            else
+            {
+                Console.WriteLine("defaulut things");
+            }
+        }
+        ///三元
+        public static string DoSomething0(int age)
+        {
+            if (age > 3) throw new ArgumentException();
+            if (age < 1) throw new ArgumentException();
+            return age == 2 ? "aaaa" : "bbbbb";
+        }
+        public static void DoSomething(string something)
+        {
+            var dic = new Dictionary<string, Action>();
+            dic["a"] = () => { Console.WriteLine("aaa"); };
+            dic["bbb"] = () => { Console.WriteLine("bbb"); };
+
+            dic[something].Invoke();
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("C#测试");
-            
+            GraphicEditor graphic = new GraphicEditor();
+            graphic.DrawShape(new Plane());
+            graphic.DrawShape(new Cube());
+            graphic.DrawShape(new Triangel());
+
         }
 
 
@@ -217,5 +280,53 @@ namespace CSharpConsoleApp
             Console.WriteLine($"gc after have{0:N0}", GC.GetTotalMemory(true));
         }
     }
+
+
+    /// <summary>
+    /// 开闭原则：对修改关闭,对扩展开放
+    /// </summary>
+    
+    //调用方(用户,使用方)-对修改关闭
+    public class GraphicEditor
+    {
+        public void DrawShape(Shape s)
+        {
+            s.Draw();
+        }
+    }
+
+   //提供方(被调用的类)-对扩展开放
+   public  abstract class Shape
+    {
+        public int m_Type;
+        public abstract void Draw();
+
+    }
+
+    public class Cube : Shape
+    {
+        public Cube()
+        {
+            m_Type = 1;
+        }
+
+        public override void Draw()
+        {
+            Console.WriteLine("正方体");
+        }
+    }
+
+    public class Triangel : Shape
+    {
+        public Triangel() { m_Type = 2; }
+
+        public override void Draw()
+        {
+            Console.WriteLine("三角");
+        }
+    }
+
+    public class Plane : Shape {public Plane() { m_Type = 3; } public override void Draw() { Console.WriteLine("平面"); } };
+
 }
 
